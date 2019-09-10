@@ -1,0 +1,30 @@
+mixin photoItem(imgSrc)
+  .photo__photo-item&attributes(attributes)
+    img.photo__photo-image(src=imgSrc, alt="Фотография со свидания")
+
+section.section.photo
+  .container
+    .photo__inner
+      h3.photo__title Фотографии пакета:
+      .photo__photos-container
+        +photoItem("./img/photo/photo-1.jpg")
+        +photoItem("./img/photo/photo-2.jpg")
+        +photoItem("./img/photo/photo-3.jpg")
+        +photoItem("./img/photo/photo-4.jpg")
+        +photoItem("./img/photo/photo-3.jpg")
+        +photoItem("./img/photo/photo-4.jpg")
+        +photoItem("./img/photo/photo-2.jpg")
+        +photoItem("./img/photo/photo-3.jpg")
+        +photoItem("./img/photo/photo-1.jpg")(class="photo__photo-item_hidden")
+        +photoItem("./img/photo/photo-2.jpg")(class="photo__photo-item_hidden")
+        +photoItem("./img/photo/photo-3.jpg")(class="photo__photo-item_hidden")
+        +photoItem("./img/photo/photo-4.jpg")(class="photo__photo-item_hidden")
+        +photoItem("./img/photo/photo-3.jpg")(class="photo__photo-item_hidden")
+        +photoItem("./img/photo/photo-4.jpg")(class="photo__photo-item_hidden")
+        +photoItem("./img/photo/photo-2.jpg")(class="photo__photo-item_hidden")
+        +photoItem("./img/photo/photo-3.jpg")(class="photo__photo-item_hidden")
+      .photo__footer
+        button.button.photo__show-more
+          i.photo__icon.icon.icon__arrow-down
+          span.photo__show-more-text Показать все фото
+          i.photo__icon.icon.icon__arrow-down
