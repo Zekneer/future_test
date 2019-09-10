@@ -1,0 +1,61 @@
+.about
+  &__inner
+    padding-top: 37px
+    height: 617px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-wrap: wrap
+    +border
+  &__article
+    margin-bottom: 40px
+    width: 584px
+  &__title
+    margin-bottom: 14px
+    font-size: 18px
+    line-height: 26px
+    font-weight: 500
+  &__text
+    margin-bottom: 25px
+    font-size: 16px
+    line-height: 24px
+    &:last-of-type
+      margin-bottom: 10px
+  &__visiting-card
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      display: block
+      width: 31px
+      height: 27px
+      background: url("../img/icons/heart.svg")
+      
+.visiting-card
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__avatar
+    margin-bottom: 20px
+  &__name
+    margin-bottom: 5px
+    font-size: 18px
+    line-height: 22px
+    font-weight: 500
+  &__prof
+    margin-bottom: 10px
+    font-size: 14px
+    line-height: 21px
+  &__link
+    width: 200px
+    font-size: 14px
+    line-height: 21px
+    color: $link-color
+    

@@ -24,3 +24,10 @@ mixin ratingStats(fullCount)
       b.rating-stats__emphasize 50 
       | отзывов с оценкой 
     +ratingStars(fullCount)(class="rating-stats__rating-stars")
+
+mixin linkButton(text)
+  button.button.button-more.photo__show-more&attributes(attributes)
+    if !attributes.class
+      i.button-more__icon.icon.icon__arrow-down
+    span.button-more__text= text
+    i.button-more__icon.icon.icon__arrow-down

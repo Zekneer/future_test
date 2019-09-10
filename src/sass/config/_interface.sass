@@ -15,18 +15,6 @@ a
 svg
   max-width: 100%
 
-.button
-  padding: 0
-  border: none
-  font: inherit
-  color: inherit
-  background-color: transparent
-
-
-.container
-  max-width: 1142px
-  margin: auto
-
 html
   overflow: scroll
   overflow-x: hidden
@@ -37,3 +25,35 @@ html
     
 ::-webkit-scrollbar-thumb
   background: #FF0000
+
+.button
+  padding: 0
+  border: none
+  font: inherit
+  color: inherit
+  background-color: transparent
+
+.button-more
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 17px
+  line-height: 25px
+  font-weight: 500
+  color: $link-color
+  &__text
+    padding: 0 10px
+  &_single
+    .button-more__text
+      padding-left: 0
+      padding-right: 10px
+  &__icon
+    width: 11px
+    height: 6px
+
+.container
+  max-width: 1142px
+  margin: auto
+
+.avatar
+  border-radius: 50%
