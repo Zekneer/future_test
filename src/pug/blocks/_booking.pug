@@ -1,0 +1,23 @@
+section.booking
+  .container
+    .booking__inner
+      h3.booking__title Доступная съемка в ближайшее время:
+      .booking__content
+        .booking__date-choose.booking__content-row
+          time.booking__chousen-date Пятница, 14 сентября
+          button.button.booking__calendar-button
+            i.icon.icon__calendar.booking__calendar-icon
+        .booking__free-date.booking__content-row
+          .booking__free-text
+            time.booking__time.booking__free-text-item 15:00 - 18:00
+            span.booking__price.booking__free-text-item 1500₽
+            span.booking__free-place.booking__free-text-item Осталось — 1 место
+          button.button.booking__button Выбрать
+        .booking__free-date.booking__content-row
+          .booking__free-text
+            time.booking__time.booking__free-text-item 19:00 - 22:00
+            span.booking__price.booking__free-text-item 1500₽
+            span.booking__free-place.booking__free-text-item Осталось — 1 место
+          button.button.booking__button Выбрать
+        .booking__content-row
+          +ratingStats(5)(class="booking__rating-stats")
