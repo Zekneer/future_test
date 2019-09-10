@@ -1,0 +1,98 @@
+.promo
+  &__inner
+    padding-top: 70px
+    max-height: 600px
+    display: flex
+    flex-direction: column
+    align-content: space-between
+    justify-content: flex-start
+    flex-wrap: wrap
+  .video__click
+    background-image: url("../img/promo/video-bg.jpg")
+    background-size: cover
+  &__title
+    max-width: 260px
+    margin-bottom: 15px
+    font-size: 40px
+    line-height: 49px
+    font-weight: 500
+  &__text
+    max-width: 520px
+    margin-bottom: 10px
+    font-size: 18px
+    line-height: 26px
+  &__thesis-list
+    padding-bottom: 20px
+    border-bottom: 0.5px solid $border-color
+  &__rating-stats
+    border-bottom: 0.5px solid $border-color
+
+.thesis-list
+  &__item
+    display: flex
+    align-items: center
+    font-size: 14px
+    line-height: 20px
+    font-weight: 500
+  &__icon
+    display: inline-block
+    height: 50px
+    width: 50px
+  
+.video
+  width: 554px
+  height: 374px
+  &__click
+    position: relative
+    width: 100%
+    height: 100%
+    background-color: $video-bg
+    border-radius: 4px
+    cursor: pointer
+    &::after
+      content: ''
+      position: absolute
+      bottom: 30px
+      right: 40px
+      box-sizing: content-box
+      border-left: 16px solid #fff
+      border-top: 11px solid transparent
+      border-bottom: 11px solid transparent
+      transition: all 0.5s ease
+    &:hover::after
+      transform: scale(2.5)
+    &_hidden
+      display: none
+  &__youtube
+    width: 100%
+    height: 100%
+    border: none
+    &_hidden
+      display: none
+
+.rating-stats
+  height: 87px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  &__text
+    padding-top: 4px
+    margin-right: 14px
+    font-size: 18px
+    line-height: 26px
+  &__emphasize
+    font-weight: 600
+  &__icon
+    display: block
+    width: 50px
+    height: 50px
+
+.rating-stars
+  width: 120px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &__icon
+    display: block
+    width: 20px
+    height: 20px
