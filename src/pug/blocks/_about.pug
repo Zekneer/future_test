@@ -9,14 +9,15 @@ section.about
         h4.about__title Об организаторе:
         p.about__text= articleOrgFirst
         p.about__text= articleOrgSecond
-        +linkButton("Читать еще")(class="button-more_single")
+        +linkButton("Читать еще", true)(class="button-more_single")
       article.about__services.about__article
         h4.about__title Что я предоставлю:
         p.about__text= articleServFirst
-        +linkButton("Читать еще")(class="button-more_single")
+        +linkButton("Читать еще", true)(class="button-more_single")
       .visiting-card.about__visiting-card
         img.visiting-card__avatar.avatar(src="./img/avatars/avatar-1.jpg")
         .visiting-card__text
           h4.visiting-card__name Марина Иванова
           span.visiting-card__prof Фотограф
           a.visiting-card__link(href="#") Показать больше информации о фотографе
+        i.visiting-card__icon.icon.icon_heart

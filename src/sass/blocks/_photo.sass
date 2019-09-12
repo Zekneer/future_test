@@ -1,7 +1,7 @@
 .photo
   padding-top: 30px
   &__inner
-    border-bottom: 0.5px solid $border-color
+    +border
   &__title
     margin-bottom: 37px
     font-size: 20px
@@ -29,12 +29,16 @@
 
 +tablet
   .photo
+    &__inner
+      border: none
     .container
       max-width: none
     &__title
       max-width: 90%
       margin-left: auto
       margin-right: auto
+      text-align: center
+      font-size: 28px
     &__photos-container
       padding: 0 15px
       max-height: 275px

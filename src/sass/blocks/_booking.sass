@@ -2,12 +2,12 @@
   &__inner
     padding-top: 50px
     padding-bottom: 82px
+    line-height: 1.45
   &__title
     max-width: 230px
     margin-bottom: 30px
     font-weight: 500
     font-size: 20px
-    line-height: 29px
   &__content
     max-width: 770px
     border: 1px solid $border-color
@@ -24,12 +24,10 @@
       margin-bottom: 10px
   &__price
     font-size: 18px
-    line-height: 22px
     font-weight: 600
   &__content-row
     padding: 20px 30px
     font-size: 18px
-    line-height: 26px
   &__date-choose
     display: flex
     align-items: center
@@ -41,8 +39,7 @@
     width: 35px
     height: 35px
   &__calendar-icon
-    width: 35px
-    height: 35px
+    font-size: 18px
   &__button
     padding: 16px 32px
     font-size: 14px
@@ -51,3 +48,28 @@
     color: $primary
     border: 2px solid $primary
     border-radius: 3px
+
++mobileL
+  .booking
+    &__inner
+      padding-top: 40px
+      padding-bottom: 45px
+    &__title
+      max-width: none
+      font-size: 28px
+      text-align: center
+    &__calendar-button
+      display: none
+    &__date-choose
+      justify-content: center
+    &__free-date
+      flex-direction: column
+      align-items: flex-start
+    &__free-place
+      margin-bottom: 20px
+    &__content-row
+      padding: 30px 20px
+    &__rating-stats
+      .rating-stats__text
+        margin-right: 0
+        font-size: 13px
