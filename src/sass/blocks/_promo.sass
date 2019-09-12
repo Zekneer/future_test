@@ -1,47 +1,50 @@
 .promo
   &__inner
     padding-top: 70px
-    max-height: 600px
+    max-height: 650px
     display: flex
     flex-direction: column
     align-content: space-between
     justify-content: flex-start
     flex-wrap: wrap
-  .video__click
-    background-image: url("../img/promo/video-bg.jpg")
-    background-size: cover
   &__title
     max-width: 260px
-    margin-bottom: 15px
+    margin-bottom: 12px
     font-size: 40px
-    line-height: 49px
     font-weight: 500
   &__text
     max-width: 520px
-    margin-bottom: 10px
     font-size: 18px
-    line-height: 26px
-  &__thesis-list
-    padding-bottom: 20px
-    border-bottom: 0.5px solid $border-color
-  &__rating-stats
-    border-bottom: 0.5px solid $border-color
+    line-height: 1.4
+  &__rating
+    height: 87px
+    display: flex
+    align-items: center
+    +border
+  .video__click
+    background-image: url("../img/promo/video-bg.jpg")
+    background-size: cover
 
 .thesis-list
+  padding: 20px 0
+  +border
   &__item
+    margin-bottom: 16px
     display: flex
     align-items: center
     font-size: 14px
-    line-height: 20px
+    line-height: 1.4
     font-weight: 500
   &__icon
-    display: inline-block
-    height: 50px
-    width: 50px
+    margin-right: 0.3em
+    font-size: 2.5em
   
 .video
-  width: 554px
-  height: 374px
+  position: relative
+  height: 375px
+  width: 555px
+  max-width: 100%
+  margin-bottom: 30px
   &__click
     position: relative
     width: 100%
@@ -64,6 +67,9 @@
     &_hidden
       display: none
   &__youtube
+    position: absolute
+    top: 0
+    left: 0
     width: 100%
     height: 100%
     border: none
@@ -71,28 +77,63 @@
       display: none
 
 .rating-stats
-  height: 87px
   display: flex
   align-items: center
-  justify-content: flex-start
+  &__container
+    display: flex
+    align-items: center
+    flex-wrap: wrap
   &__text
-    padding-top: 4px
     margin-right: 14px
     font-size: 18px
-    line-height: 26px
-  &__emphasize
-    font-weight: 600
+    line-height: 1.4
   &__icon
-    display: block
-    width: 50px
-    height: 50px
+    margin-right: 10px
+    margin-bottom: 10px
+    font-size: 35px
 
 .rating-stars
-  width: 120px
+  width: 118px
   display: flex
   align-items: center
   justify-content: space-between
   &__icon
-    display: block
-    width: 20px
-    height: 20px
+    font-size: 18px
+
++medium
+  .promo
+    &__inner
+      max-height: none
+      flex-wrap: nowrap
+    &__title
+      font-size: 34px
+      order: -2
+    &__video
+      order: -1
+
++tablet
+  .promo
+    &__inner
+      padding-top: 55px
+    &__title
+      align-self: center
+      text-align: center
+    &__video
+      height: 258px
+      width: 380px
+      align-self: center
+
++mobileL
+  .promo
+    &__inner
+      padding-top: 39px
+    &__title
+      font-size: 28px
+    &__text
+      font-size: 14px
+    &__video
+      height: 197px
+      width: 290px
+  .rating-stats
+    &__text
+      font-size: 14px

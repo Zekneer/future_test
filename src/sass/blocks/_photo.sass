@@ -13,6 +13,8 @@
     flex-wrap: wrap
     justify-content: center
   &__photo-item
+    min-height: 185px
+    min-width: 275px
     margin-right: 10px
     margin-bottom: 10px
     flex-basis: 275px
@@ -23,7 +25,22 @@
     border-radius: 4px
   &__footer
     height: 80px
-    display: flex
-    justify-content: center
-    align-items: center
+    +flexCenter
 
++tablet
+  .photo
+    .container
+      max-width: none
+    &__title
+      max-width: 90%
+      margin-left: auto
+      margin-right: auto
+    &__photos-container
+      padding: 0 15px
+      max-height: 275px
+      flex-wrap: nowrap
+      justify-content: flex-start
+    &__photo-item_hidden
+      display: block
+    &__footer
+      display: none

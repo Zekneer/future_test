@@ -1,0 +1,59 @@
+// Общие блоки
+// Кнопки
+.button
+  padding: 0
+  border: none
+  font: inherit
+  color: inherit
+  background-color: transparent
+
+.button-more
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 17px
+  line-height: 1.5
+  font-weight: 500
+  color: $link-color
+  cursor: pointer
+  &__text
+    padding: 0 10px
+  &__icon
+    width: 11px
+    height: 6px
+
+  &_single
+    .button-more__text
+      padding-left: 0
+      padding-right: 10px
+
+// Изображения
+.avatar
+  border-radius: 50%
+
+.icon
+  display: inline-block
+  width: 1em
+  min-width: 1em
+  height: 1em
+  background-repeat: no-repeat
+  background-position: center
+  background-size: contain
+  &_pin
+    background-image: url("../img/icons/person.svg")
+  &_clock
+    background-image: url("../img/icons/clock.svg")
+  &_photo
+    background-image: url("../img/icons/photo.svg")
+  &_money
+    background-image: url("../img/icons/money.svg")
+  &_map-pin
+    background-image: url("../img/icons/map-pin.svg")
+  &_speech
+    background-image: url("../img/icons/speech.svg")
+  &_cup
+    background-image: url("../img/icons/cup.svg")
+  &_star-full
+    background-image: url("../img/icons/star-full.svg")
+  &_arrow-down
+    background-image: url("../img/icons/arrow.svg")

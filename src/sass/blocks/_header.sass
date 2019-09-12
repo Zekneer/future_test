@@ -1,27 +1,63 @@
 .header
   position: relative
   z-index: 1
+  font-size: 14px
   box-shadow: 0px 8px 5px -4px rgba(0, 0, 0, 0.15)
-
   &__inner
+    height: 80px
     display: flex
     align-items: center
-    height: 100px
-
   &__logo
-    display: block
+    height: 23px
     margin-right: 36px
+  &__city
+    display: none
+    text-align: center
+    color: $link-color
+  &__phone
+    .phone__icon
+      display: none
+      font-size: 20px
 
 .phone
   display: block
-  font-size: 14px
-  line-height: 17px 
-
   &__text
     color: $text-color-light
   &__link
     color: $text-color
 
 .logo
+  width: auto
   &__image
+    height: 100%
     display: block
+
++medium
+  .header
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15)
+    &__inner
+      height: 60px
+    &__logo
+      height: 15px
+      margin-right: 20px
+
++mobileL
+  .header
+    box-shadow: none
+    &__inner
+      position: relative
+      justify-content: center
+    &__city
+      display: inline-block
+    &__logo
+      position: absolute
+      left: 0
+      margin-right: 0
+    &__phone
+      position: absolute
+      right: 0
+      .phone__text,
+      .phone__number
+        display: none
+      .phone__icon
+        display: block

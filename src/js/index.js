@@ -1,6 +1,9 @@
 // Third party libraries
 require('@babel/polyfill');
 
+// My modules
+require('./modules/slider/index');
+
 // Click handlers
 const videoHandler = require('./handlers/video');
 

@@ -2,6 +2,9 @@ header.header
   .container
     .header__inner
       +logo()(class="header__logo")
-      .phone
+      span.header__city Москва
+      .phone.header__phone
         span.phone__text Телефон:
-        a.phone__link(href="tel:88001231212") 8(800)-123-12-12
+        a.phone__link(href="tel:88001231212") 
+          span.phone__number 8(800)-123-12-12
+          i.icon.icon_pin.phone__icon

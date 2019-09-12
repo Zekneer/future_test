@@ -1,0 +1,42 @@
+// Настраиваем шрифты
+html
+  font-size: 10px
+body
+  font-family: 'Montserrat', sans-serif
+  font-size: 16px
+  font-weight: normal
+  line-height: 1.2
+b
+  font-weight: 600
+
+// Убираем вертикальный скролл
+html
+  overflow: scroll
+  overflow-x: hidden
+::-webkit-scrollbar
+  width: 0px
+  background: transparent
+::-webkit-scrollbar-thumb
+  background: #FF0000
+
+// Настраиваем отображение
+*:focus
+  outline: none
+a
+  text-decoration: none
+svg
+  max-width: 100%
+
+// Масштаб страницы
+body
+  max-width: 1920px
+  margin: auto
+  overflow-x: hidden
+.container
+  max-width: 1142px
+  margin: auto
+
+// Медиа запросы
++medium
+  .container
+    max-width: 90%
