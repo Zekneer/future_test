@@ -1,53 +1,159 @@
 .meeting-info
   height: 0
-  &__list
-    //margin-top: -490px
-    transform: translateY(-490px)
+  .container
+    height: 0
+  &__inner
     position: relative
     z-index: 1
+    height: 470px
     width: 420px
-    padding: 50px 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    // margin-top: -490px
+    // transform: translateY(-490px)
+    top: -490px
     background-color: #fff
-    li:not(:last-child)
-      margin-bottom: 30px
+  &__slider-prev,
+  &__slider-next
+    position: absolute
+    top: 70px
+    font-size: 20px
+  &__slider-prev
+    left: 25px
+  &__slider-next
+    right: 25px
+  &__slider-dots,
+  &__slider-prev,
+  &__slider-next
+    display: none
+  &__slider-dots
+    height: 10px
+    width: 52px
+    margin-top: 15px
+    justify-content: space-between
+  &__slider-dot
+    height: 10px
+    width: 10px
+    border-radius: 50%
+    border: 0.5px solid #B3B3B3
+  &__slider-dot_check
+    border-radius: 50%
+    border-width: 0
+    background-color: $primary
+  &__list
+    position: relative
+    left: 0
+    height: 290px
+    width: 100%
+    padding: 50px 30px 0 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: all 0.5s ease
   &__item
     height: 60px
     display: flex
     align-items: center
+    &:last-of-type
+      margin-bottom: 0
   &__item-content
     height: 100%
     display: flex
     flex-direction: column
     justify-content: space-around
   &__number
-    width: 60px
-    height: 60px
+    min-width: 60px
+    min-height: 60px
     margin-right: 18px
     display: flex
     align-items: center
     justify-content: center
     font-size: 35px
-    line-height: 51px
+    line-height: 1.45
     font-weight: bold
     color: #fff
     background-color: $primary
     border-radius: 50%
   &__thesis
     font-size: 18px
-    line-height: 27px
+    line-height: 1.45
     font-weight: 500
   &__answer
     font-size: 18px
-    line-height: 26px
+    line-height: 1.45
+  
   &__visiting-card
-    flex-direction: row
-    text-align: left
-    .visiting-card__avatar
-      width: 60px
-      height: 60px
-    .visiting-card__name,
-    .visiting-card__prof
-      margin-bottom: 0
-    .visiting-card__link
-      width: auto
+    display: flex
+    &-container
+      padding: 0 30px 50px 30px
+    .visiting-card
+      &__avatar
+        width: 60px
+        height: 60px
+        margin-right: 10px
+      &__name
+        margin-bottom: 3px
+      &__text
+        display: flex
+        flex-direction: column
+        justify-content: space-between
 
++medium
+  .meeting-info
+    .container
+      height: auto
+    &__inner
+      width: 370px
+
++tablet
+  .meeting-info
+    height: auto
+    padding-top: 50px
+    &__inner
+      top: 0
+
++mobileL
+  .meeting-info
+    &__inner
+      height: 380px
+      width: 275px
+      border: 1px solid $border-color
+      margin: 0 auto
+      top: 0
+    &__list
+      height: auto
+      padding-left: 0
+      padding-right: 0
+      flex-direction: row
+      align-items: flex-start
+    &__item
+      height: auto
+      min-width: 275px
+      flex-direction: column
+      text-align: center
+    &__number
+      margin-right: 0
+      margin-bottom: 15px
+    &__slider
+      display: flex
+      flex-direction: column
+      align-items: center
+      overflow: hidden
+    &__slider-prev,
+    &__slider-next
+      display: block
+    &__slider-dots
+      display: flex
+    &__visiting-card-container
+      padding-bottom: 20px
+    &__thesis
+      margin-bottom: 8px
+      font-size: 16px
+    &__answer
+      font-size: 14px
+    &__visiting-card
+      .visiting-card__name
+        font-size: 15px
+      .visiting-card__prof
+        font-size: 14px

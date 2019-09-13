@@ -1,24 +1,33 @@
 section.meeting-info
   .container
-    ol.meeting-info__list
-      li.meeting-info__item
-        span.meeting-info__number 1
-        .meeting-info__item-content
-          span.meeting-info__thesis Где встречаемся?
-          span.meeting-info__answer Москва
-      li.meeting-info__item
-        span.meeting-info__number 2
-        .meeting-info__item-content
-          span.meeting-info__thesis Время съемки
-          span.meeting-info__answer 3 часа
-      li.meeting-info__item
-        span.meeting-info__number 3
-        .meeting-info__item-content
-          span.meeting-info__thesis Мест осталось:
-          span.meeting-info__answer 2 места
-      li.visiting-card.meeting-info__visiting-card.meeting-info__item
-        img.visiting-card__avatar.avatar(src="./img/avatars/avatar-1.jpg")
-        .visiting-card__text
-          h4.visiting-card__name Марина Иванова
-          span.visiting-card__prof Фотограф
-          a.visiting-card__link(href="#") Показать больше информации
+    .meeting-info__inner
+      .meeting-info__slider
+        ol.meeting-info__list
+          li.meeting-info__item.meeting-info__slide
+            span.meeting-info__number 1
+            .meeting-info__item-content
+              span.meeting-info__thesis Где встречаемся?
+              span.meeting-info__answer Москва
+          li.meeting-info__item.meeting-info__slide
+            span.meeting-info__number 2
+            .meeting-info__item-content
+              span.meeting-info__thesis Время съемки
+              span.meeting-info__answer 3 часа
+          li.meeting-info__item.meeting-info__slide
+            span.meeting-info__number 3
+            .meeting-info__item-content
+              span.meeting-info__thesis Мест осталось:
+              span.meeting-info__answer 2 места
+        .meeting-info__slider-dots
+          .meeting-info__slider-dot.meeting-info__slider-dot_check
+          .meeting-info__slider-dot
+          .meeting-info__slider-dot
+        i.meeting-info__slider-prev.icon.icon_arrow-left
+        i.meeting-info__slider-next.icon.icon_arrow-right
+      .meeting-info__visiting-card-container
+        .visiting-card.meeting-info__visiting-card
+          img.visiting-card__avatar.avatar(src="./img/avatars/avatar-1.jpg")
+          .visiting-card__text
+            h4.visiting-card__name Марина Иванова
+            span.visiting-card__prof Фотограф
+            a.visiting-card__link(href="#") Показать больше информации

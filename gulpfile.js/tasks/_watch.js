@@ -12,7 +12,7 @@ module.exports = () => {
   watch('./dev/css/**/*').on('change', reload);
   watch('./dev/*.html').on('change', reload);
 
-  watch('./src/sass/**/*.sass', _cssDev);
+  watch('./src/sass/**/*', _cssDev);
   watch('./src/fonts/*', _fonts);
   watch('./src/js/**/*', _jsDev);
   watch('./src/img/**/*', _imgDev);

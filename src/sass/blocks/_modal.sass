@@ -1,0 +1,145 @@
+.modal
+  position: absolute
+  z-index: 99
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  &_hidden
+    display: none
+  &__title
+    margin-bottom: 30px
+    font-weight: 600
+    font-size: 22px
+    line-height: 1.5
+    text-align: center
+  &__content
+    max-width: 615px
+    padding: 61px 97px
+    margin: 15% auto
+    background-color: #fff
+    border-radius: 6px
+
+.form
+  font-style: 16px
+  &__group
+    height: 74px
+    margin-bottom: 10px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &_card
+      height: 120px
+      justify-content: flex-start
+      .form__label
+        margin-bottom: 10px
+    &_checkbox
+      height: auto
+      margin-bottom: 25px
+    &_submit
+      height: auto
+      margin-bottom: 0
+  &__label
+    font-weight: 500
+    &-public
+      position: relative
+      padding-left: 26px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 16px
+        width: 16px
+        display: block
+        background-color: $primary
+        border-radius: 2px
+        box-shadow: 0px 0px 3px rgba(201, 64, 66, 0.6)
+      &::after
+        content: ''
+        position: absolute
+        top: 3px
+        left: 2px
+        height: 6px
+        width: 12px
+        display: block
+        border: 1.5px solid #fff
+        border-top: 0
+        border-right: 0
+        transition: all 0.2s ease
+        opacity: 0
+        transform: rotate(25deg)
+  &__required
+    color: #C94042
+  &__input
+    height: 44px
+    padding-left: 20px
+    display: flex
+    align-items: center
+    border: 1px solid $border-color
+    border-radius: 3px
+    &::placeholder
+      font-size: 16px
+      color: $border-color
+    &-public
+      display: none
+      &:checked + .form__label-public::after
+        opacity: 1
+        transform: rotate(-45deg) 
+    &-submit
+      height: 50px
+      +flexCenter
+      color: #ffffff
+      border: none
+      background-color: $primary
+  &__date
+    background-image: url("../img/modal/calendar.svg")
+    background-repeat: no-repeat
+    background-position: center right 14px
+    background-size: 27px
+  &__card-data
+    display: flex
+  &__card-number
+    border-radius: 3px 3px 0 0
+  &__card-date
+    width: 50%
+    border-radius: 0 0 0 3px
+    border-top: 0
+    border-right: 0
+  &__card-cvv
+    width: 50%
+    border-radius: 0 0 3px 0
+    border-top: 0
+    
+
++tablet
+  .modal
+    &__content
+      max-width: 90%
+      padding: 50px 40px
+
++mobileL
+  .modal
+    &__content
+      padding: 50px 10px 35px 10px
+    &__title
+        margin-bottom: 20px
+  .form
+    &__group_card
+      height: 175px
+    &__card
+      &-date
+        width: 100%
+        border: 1px solid $border-color
+        border-radius: 0
+        border-top: 0
+        border-bottom: 0
+      &-cvv
+        width: 100%
+        border: 1px solid $border-color
+        border-radius: 0 0 3px 3px
+    &__card-data
+      flex-direction: column
