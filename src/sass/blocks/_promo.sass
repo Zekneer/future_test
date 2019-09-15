@@ -1,12 +1,6 @@
 .promo
   &__inner
     padding-top: 70px
-    max-height: 650px
-    display: flex
-    flex-direction: column
-    align-content: space-between
-    justify-content: flex-start
-    flex-wrap: wrap
   &__title
     max-width: 260px
     margin-bottom: 12px
@@ -18,16 +12,21 @@
     line-height: 1.4
   &__rating
     height: 87px
+    max-width: 560px
     display: flex
     align-items: center
+    border-top: 0.5px solid $border-color
     +border
+  &__video
+    margin-top: -100px
+    margin-bottom: 30px
+    float: right
   .video__click
     background-image: url("../img/promo/video-bg.jpg")
     background-size: cover
 
 .thesis-list
   padding: 20px 0
-  +border
   &__item
     margin-bottom: 16px
     display: flex
@@ -44,7 +43,6 @@
   height: 375px
   width: 555px
   max-width: 100%
-  margin-bottom: 30px
   &__click
     position: relative
     width: 100%
@@ -102,26 +100,25 @@
 
 +medium
   .promo
-    &__inner
-      max-height: none
-      flex-wrap: nowrap
     &__title
       font-size: 34px
-      order: -2
     &__video
-      order: -1
+      margin-top: 0
+      float: none
 
 +tablet
   .promo
     &__inner
       padding-top: 55px
     &__title
-      align-self: center
+      margin-right: auto
+      margin-left: auto
       text-align: center
     &__video
       height: 258px
       width: 380px
-      align-self: center
+      margin-right: auto
+      margin-left: auto
 
 +mobileL
   .promo

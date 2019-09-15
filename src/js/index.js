@@ -1,15 +1,25 @@
-// Third party libraries
+// Сторонние библиотеки
 require('@babel/polyfill');
-var $ = require('jquery');
-require('./thirdPartyModules/datetimepicker');
 
-// My modules
+// Мои модули
+// Полифилы
+require('./modules/polyfills/index');
+// Слайдер фото для маленьких экранов
 require('./modules/slider/index');
+// Календарь для поля ввода даты
+require('./modules/date/index');
+// Авторедактирование ввода карты и телефона
+require('./modules/autoedit/index');
+// Проверка сабмита
+require('./handlers/submit');
 
-// Click handlers
-const videoHandler = require('./handlers/video');
+// Глобальный обработчик кликов
+const { videoHandler } = require('./handlers/video');
 const { prevHandler, nextHandler } = require('./handlers/slides');
 const { modalShow, modalHide } = require('./handlers/modal');
+const { reviewsShow } = require('./handlers/reviews');
+const { photoShow } = require('./handlers/photo');
+const { readMore } = require('./handlers/readMore');
 
 document.addEventListener('click', (event) => {
   let handlerTarget = event.target.closest('.video__click');
@@ -32,14 +42,23 @@ document.addEventListener('click', (event) => {
     return modalShow.call(handlerTarget, event);
   }
 
-  handlerTarget = event.target.closest('.modal');
+  handlerTarget = event.target.closest('.modal__close-button') || event.target.closest('.modal');
   if (handlerTarget) {
     return modalHide.call(handlerTarget, event);
   }
-});
 
-$.datetimepicker.setLocale('ru');
-$('#datetimepicker').datetimepicker({
-  timepicker: false,
-  format: 'd.m.Y',
+  handlerTarget = event.target.closest('.reviews__button-more');
+  if (handlerTarget) {
+    return reviewsShow.call(handlerTarget, event);
+  }
+
+  handlerTarget = event.target.closest('.photo__button-more');
+  if (handlerTarget) {
+    return photoShow.call(handlerTarget, event);
+  }
+
+  handlerTarget = event.target.closest('.about__read-more');
+  if (handlerTarget) {
+    return readMore.call(handlerTarget, event);
+  }
 });

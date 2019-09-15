@@ -7,6 +7,9 @@ mixin thesisListItem(text, iconClass)
   .container
     .promo__inner
       h2.promo__title Фотосессия в вертолете
+      .promo__video.video
+        .video__click
+        iframe.video__youtube.video__youtube_hidden(data-src="https://www.youtube.com/embed/dQw4w9WgXcQ?;autoplay=1&;controls=0&;showinfo=0")
       p.promo__text Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты
       ul.thesis-list
         +thesisListItem("3 часа съемки", "icon_clock")
@@ -16,6 +19,3 @@ mixin thesisListItem(text, iconClass)
         +thesisListItem("Готовы ответить на любые вопросы", "icon_speech")
       .promo__rating
         +ratingStats(5)
-      .promo__video.video
-        .video__click
-        iframe.video__youtube.video__youtube_hidden(data-src="https://www.youtube.com/embed/dQw4w9WgXcQ?;autoplay=1&;controls=0&;showinfo=0")

@@ -1,61 +1,72 @@
 .reviews
-  padding-top: 131px 
+  padding-top: 130px
   &__title
     margin-bottom: 50px
     font-size: 20px
-    line-height: 29px
     font-weight: 500
   &__footer
-    height: 113px
-    display: flex
-    align-items: center
-    justify-content: center
+    padding-top: 25px
+    +flexCenter
 
 .review
-  width: 630px
-  height: 277px
-  display: flex
-  justify-content: space-between
-  align-items: flex-start
-  &:not(:last-of-type)
-    margin-bottom: 19px
+  max-width: 630px
+  margin-bottom: 20px
+  &_hidden
+    display: none
   &__avatar
-    width: 101px
-    height: 101px
+    height: 115px
+    width: 120px
+    padding-right: 20px
+    padding-bottom: 15px
+    float: left
   &__content
-    width: 510px
-    height: 100%
-    padding: 10px 0
-    display: flex
-    flex-direction: column
+    margin-left: 120px
     +border
+  &__stars
+    margin-bottom: 20px
+  &__recomendation
+    position: absolute
+    top: -44px
+    right: 0
+    font-size: 14px
+    color: $text-color-light
   &__name
     margin-bottom: 10px
     font-size: 18px
-    line-height: 22px
     font-weight: 500
   &__prof
+    display: block
     margin-bottom: 10px
     font-size: 14px
-    line-height: 21px
-  &__recomendation-text
-    font-size: 14px
-    line-height: 21px
-    color: $text-color-light
   &__text
-    margin-bottom: 14px
+    position: relative
     font-size: 16px
-    line-height: 24px
-  &__date
-    font-size: 14px
-    line-height: 21px
-    color: $text-color-light
-  &__rate
+    line-height: 1.5
     margin-bottom: 20px
-    display: flex
-    justify-content: space-between
-  &recomendation
-    +flexCenter
-  &__icon
-    width: 15px
-    height: 12px
+  &__date
+    display: block
+    margin-bottom: 20px
+    font-size: 14px
+    line-height: 1.5
+    color: $text-color-light 
+
++tablet
+  .reviews
+    padding-top: 40px
+    &__title
+      text-align: center
+      font-size: 28px
+      font-weight: normal
+
+  .review
+    max-width: 500px
+    &__content
+      margin-left: 0
+    &__rate
+      display: block
+    &__recomendation
+      top: 0
+      left: 0
+    &__text
+      clear: left
+      padding-top: 35px

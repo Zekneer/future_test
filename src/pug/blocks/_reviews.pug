@@ -1,42 +1,76 @@
 section.reviews
   .container
-    h3.reviews__title Отзывы:
+    h3.reviews__title Отзывы
     .reviews__container
       article.review.reviews__review
         img.review__avatar(src="./img/avatars/avatar-2.jpg")
         .review__content
           h4.review__name Валерия Антонова
           span.review__prof Арт-директор
-          .review__rate
-            +ratingStars(5)
+          //- .review__rate
+          +ratingStars(5)(class="review__stars")
+          .review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
             .review__recomendation
-              i.icon.icon__checkmark.review__icon
+              i.icon.icon_checkmark.review__icon
               span.review__recomendation-text Супер! Я бы заказала съемку снова
-          p.review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
           time.review__date 27 Апреля, 2019г.
       article.review.reviews__review
         img.review__avatar(src="./img/avatars/avatar-3.jpg")
         .review__content
           h4.review__name Валерия Антонова
           span.review__prof Арт-директор
-          .review__rate
-            +ratingStars(5)
+          //- .review__rate
+          +ratingStars(5)(class="review__stars")
+          .review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
             .review__recomendation
-              i.icon.icon__checkmark.review__icon
+              i.icon.icon_checkmark.review__icon
               span.review__recomendation-text Супер! Я бы заказала съемку снова
-          p.review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
           time.review__date 27 Апреля, 2019г.
       article.review.reviews__review
         img.review__avatar(src="./img/avatars/avatar-4.jpg")
         .review__content
           h4.review__name Валерия Антонова
-          span.review__prof Арт-директор
-          .review__rate
-            +ratingStars(5)
+          //- .review__rate
+          +ratingStars(5)(class="review__stars")
+          .review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
             .review__recomendation
-              i.icon.icon__checkmark.review__icon
+              i.icon.icon_checkmark.review__icon
               span.review__recomendation-text Супер! Я бы заказала съемку снова
-          p.review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
+          time.review__date 27 Апреля, 2019г.
+      article.review.reviews__review.review_hidden
+        img.review__avatar(src="./img/avatars/avatar-2.jpg")
+        .review__content
+          h4.review__name Валерия Антонова
+          span.review__prof Арт-директор
+          //- .review__rate
+          +ratingStars(5)(class="review__stars")
+          .review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
+            .review__recomendation
+              i.icon.icon_checkmark.review__icon
+              span.review__recomendation-text Супер! Я бы заказала съемку снова
+          time.review__date 27 Апреля, 2019г.
+      article.review.reviews__review.review_hidden
+        img.review__avatar(src="./img/avatars/avatar-3.jpg")
+        .review__content
+          h4.review__name Валерия Антонова
+          span.review__prof Арт-директор
+          //- .review__rate
+          +ratingStars(5)(class="review__stars")
+          .review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
+            .review__recomendation
+              i.icon.icon_checkmark.review__icon
+              span.review__recomendation-text Супер! Я бы заказала съемку снова
+          time.review__date 27 Апреля, 2019г.
+      article.review.reviews__review.review_hidden
+        img.review__avatar(src="./img/avatars/avatar-4.jpg")
+        .review__content
+          h4.review__name Валерия Антонова
+          //- .review__rate
+          +ratingStars(5)(class="review__stars")
+          .review__text Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!
+            .review__recomendation
+              i.icon.icon_checkmark.review__icon
+              span.review__recomendation-text Супер! Я бы заказала съемку снова
           time.review__date 27 Апреля, 2019г.
     .reviews__footer
-      +linkButton("Показать Все(134)")
+      +linkButton("Показать Все")(class="reviews__button-more")

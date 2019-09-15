@@ -8,6 +8,6 @@ module.exports.modalShow = function modalShow() {
 };
 
 module.exports.modalHide = function modalHide(event) {
-  if (event.target !== this) return;
+  if (event.target !== this && !this.classList.contains('modal__close-button')) return;
   document.querySelector('.modal').classList.add('modal_hidden');
 };

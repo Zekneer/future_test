@@ -17,11 +17,18 @@
     line-height: 1.5
     text-align: center
   &__content
+    position: relative
     max-width: 615px
     padding: 61px 97px
     margin: 15% auto
     background-color: #fff
     border-radius: 6px
+  &__close-button
+    position: absolute
+    top: 22px
+    right: 22px
+    i
+      font-size: 20px
 
 .form
   font-style: 16px
@@ -31,6 +38,26 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    &_error
+      label
+        align-self: flex-start
+      label:not(.form__label-public)::after
+        content: '!'
+        position: absolute
+        top: 3px
+        right: -18px
+        display: block
+        height: 15px
+        width: 15px
+        text-align: center
+        font-size: 13px
+        font-weight: bold
+        line-height: 15px
+        color: #fff
+        background-color: $primary
+        border-radius: 2px
+      label.form__label-public::before
+        background-color: darken($primary, 30%)
     &_card
       height: 120px
       justify-content: flex-start
@@ -43,6 +70,7 @@
       height: auto
       margin-bottom: 0
   &__label
+    position: relative
     font-weight: 500
     &-public
       position: relative
@@ -127,6 +155,11 @@
       padding: 50px 10px 35px 10px
     &__title
         margin-bottom: 20px
+    &__close-button
+      top: 17px
+      right: 17px
+      i
+        font-size: 17px
   .form
     &__group_card
       height: 175px
@@ -143,3 +176,4 @@
         border-radius: 0 0 3px 3px
     &__card-data
       flex-direction: column
+    

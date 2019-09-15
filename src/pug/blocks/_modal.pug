@@ -1,27 +1,29 @@
 .modal.modal_hidden
-  .modal__content
+  .modal__content#order
+    button.button.modal__close-button
+      i.icon.icon_close
     h3.modal__title Бронирование
     form.form.modal__form(action="#")
       .form__group
-        label.form__label Дата
+        label.form__label(for="date") Дата
           span.form__required *
-        input.form__input.form__date#datetimepicker(type="text", name="date", placeholder="Дата")
+        input.form__input.form__date#date(type="text", name="date", placeholder="Дата", autocomplete="off")
       .form__group
-        label.form__label Email
+        label.form__label(for="email") Email
           span.form__required *
-        input.form__input(type="email", name="email" placeholder="Электронная почта")
+        input.form__input#email(type="email", name="email", placeholder="Электронная почта")
       .form__group
-        label.form__label Имя
+        label.form__label(for="name") Имя
           span.form__required *
-        input.form__input(type="text", name="name", placeholder="Имя")
+        input.form__input#name(type="text", name="name", placeholder="Имя")
       .form__group
-        label.form__label Фамилия
+        label.form__label(for="surname") Фамилия
           span.form__required *
-        input.form__input(type="text", name="surname", placeholder="Фамилия")
+        input.form__input#surname(type="text", name="surname", placeholder="Фамилия")
       .form__group
-        label.form__label Телефон
+        label.form__label(for="tel") Телефон
           span.form__required *
-        input.form__input(type="tel", name="tel", placeholder="+7 (999) 123-45-67")
+        input.form__input#tel(type="tel", name="tel", placeholder="+7 (999) 123-45-67")
       .form__group.form__group_card
         label.form__label Данные карты
           span.form__required *
@@ -30,7 +32,7 @@
           input.form__input.form__card-date(type="text", name="cardDate", placeholder="Срок действия")
           input.form__input.form__card-cvv(type="text", name="cardCVV", placeholder="CVV")
       .form__group.form__group_checkbox
-        input.form__input.form__input-public#public(type="checkbox", name="public", checked="true")
-        label.form__label-public(for="public") Я согласен с пользовательским соглашением и публичной офертой
+        input.form__input.form__input-public#publicCheck(type="checkbox", name="publicCheck", checked="true")
+        label.form__label-public(for="publicCheck") Я согласен с пользовательским соглашением и публичной офертой
       .form__group.form__group_submit
-        input.form__input.form__input-submit(type="submit", name="submit", value="Забронировать")
+        input.form__input.form__input-submit#send(type="submit", name="send", value="Забронировать")

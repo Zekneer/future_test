@@ -1,0 +1,67 @@
+.footer
+  &__socials
+    &-language
+      font-size: 15px
+      color: $text-color
+      padding-bottom: 8px
+    &-inner
+      width: 100%
+      height: 100px
+      margin-bottom: 14px
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &-links
+      display: flex
+      justify-content: space-between
+    &-link
+      margin-right: 10px
+      font-size: 25px
+  &__logo
+    height: 23px
+  &__copyright
+    height: 77px
+    font-size: 14px
+    color: #b3b3b3
+    background-color: #FAF9F8
+  &__support
+    margin-bottom: 7px
+    &-tel
+      color: #b3b3b3
+  &__text
+    text-align: center
+  &__payments
+    position: absolute
+    width: 140px
+    display: flex
+    align-items: center
+    justify-content: space-between 
+    .icon
+      font-size: 35px
+
++medium
+  .footer
+    &__logo
+      height: 15px
+
++tablet
+  .footer
+    &__socials
+      &-links
+        position: relative
+      &-link
+        &:last-of-type
+          margin-right: 0
+      &-inner
+        height: 70px
+        margin-bottom: 0
+      &-language
+        position: absolute
+        right: 0
+        bottom: -55px
+    &__copyright
+      height: auto
+      background-color: #fff
+      border-top: 0.5px solid $border-color
+    &__text
+      padding-top: 60px

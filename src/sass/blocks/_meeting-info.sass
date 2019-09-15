@@ -110,17 +110,21 @@
   .meeting-info
     height: auto
     padding-top: 50px
+    .container
+      +border
     &__inner
       top: 0
 
 +mobileL
   .meeting-info
+    .container
+      border: 0
     &__inner
+      top: 0
       height: 380px
       width: 275px
-      border: 1px solid $border-color
       margin: 0 auto
-      top: 0
+      border: 1px solid $border-color
     &__list
       height: auto
       padding-left: 0

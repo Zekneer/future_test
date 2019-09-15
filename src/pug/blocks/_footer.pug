@@ -1,13 +1,25 @@
 footer.footer
-  .container
-    .footer__socials
-      +logo()(class="footer__logo")
-      .socials-links.footer__socials-links
-        a.social-link(href="#")
-          i.icon.icon__vk.social-link__icon
-        a.social-link(href="#")
-          i.icon.icon__fb.social-link__icon
-        a.social-link(href="#")
-          i.icon.icon__inst.social-link__icon
-      mixin linkButton("RU", true)(class="footer__socials-language")
-    .footer__copyright
+  .footer__socials
+    .container
+      .footer__socials-inner
+        +logo()(class="footer__logo")
+        .footer__socials-links
+          a.footer__socials-link(href="#")
+            i.icon.icon_vk.social-link__icon
+          a.footer__socials-link(href="#")
+            i.icon.icon_fb.social-link__icon
+          a.footer__socials-link(href="#")
+            i.icon.icon_inst.social-link__icon
+          +linkButton("RU", true)(class="footer__socials-language")
+  .footer__copyright
+    .container
+      .footer__payments
+        i.icon.icon_master-card
+        i.icon.icon_visa
+        i.icon.icon_paypal
+      .footer__text
+        .footer__support
+          span.footer__support-text Тех. поддержка: 
+          a.footer__support-tel(href="tel:88007000000") 8(800)700-00-00
+        span.footer__support © 2018 HELYFLY. All Rights Reserved.
+      +linkButton("RU", true)(class="footer__socials-language button-more_hidden")
