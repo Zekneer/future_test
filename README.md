@@ -1,2 +1,3 @@
 # future_test
-Helyfly landing
+Запустить среду разработки - npm start
+Собрать билд - npm run build
